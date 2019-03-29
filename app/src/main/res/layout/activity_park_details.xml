@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainfrontcolor"
+    android:orientation="vertical">
+
+    <com.theone.using.common.TitleLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_margin="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片信息" />
+
+            <LinearLayout
+                android:id="@+id/layout_parkimg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pic_park_picture">
+
+                <ImageView
+                    android:id="@+id/iv_share_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/pic_image_not_load"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="分享地点" />
+
+            <TextView
+                android:id="@+id/tx_share_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="中南大学铁道学院"
+                android:textColor="@color/textcolor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="分享时间" />
+
+            <TextView
+                android:id="@+id/tx_share_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2016.7.26 18:01"
+                android:textColor="@color/textcolor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tx_iffree"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="是否收费" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/tx_iffree"
+                    android:checked="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"
+                    android:text="免费"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="修改本条信息"
+                    android:textColor="@color/textcolor" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="备注/评论" />
+
+            <ListView
+                android:background="@color/mainbackgroundcolor"
+                android:id="@+id/lv_user_mark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:divider="#00000000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainfrontcolor"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tx_comment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:hint="请输入评论"
+            android:textColor="@color/textcolor" />
+
+        <Button
+            android:id="@+id/btn_send_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:text="发送" />
+    </LinearLayout>
+</RelativeLayout>

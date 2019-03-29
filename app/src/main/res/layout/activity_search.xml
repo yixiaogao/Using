@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbackgroundcolor"
+    android:orientation="vertical">
+
+    <com.theone.using.common.TitleLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/selector_view_shape">
+
+
+        <ImageView
+            android:id="@+id/search_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/pic_search" />
+
+        <AutoCompleteTextView
+            android:id="@+id/tx_search_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/btn_voice"
+            android:layout_toRightOf="@+id/search_iv"
+            android:background="#00000000"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_voice"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/pic_voice" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout"
+        android:layout_margin="10dp"
+        android:divider="#00000000"
+        android:background="@color/mainbackgroundcolor"/>
+
+</RelativeLayout>

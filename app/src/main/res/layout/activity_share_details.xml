@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainfrontcolor"
+    android:orientation="vertical">
+
+    <com.theone.using.common.TitleLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="图片信息" />
+
+            <ImageView
+                android:id="@+id/iv_share_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:src="@drawable/pic_image_not_load" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="分享地点" />
+
+            <TextView
+                android:id="@+id/tx_share_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="中南大学铁道学院"
+                android:textColor="@color/textcolor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="分享时间" />
+
+            <TextView
+                android:id="@+id/tx_share_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2016.7.26 18:01"
+                android:textColor="@color/textcolor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tx_iffree"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="是否收费" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/tx_iffree"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"
+                    android:text="免费"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="备注" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:hint="无备注"
+                android:textColor="@color/textcolor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#DADADA" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_comfirm_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="确定分享" />
+
+
+</RelativeLayout>

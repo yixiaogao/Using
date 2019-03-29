@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Using</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="reminder">1、充值仅限本app使用。\n2、为了保证您的资产权益，请使用官方唯一充值方式Using客户端进行充值。\n3、若充值后账户余额长时间无变化，请致电客服。
+    </string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

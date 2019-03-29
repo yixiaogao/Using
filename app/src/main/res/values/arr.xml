@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listviewitemstr">
+        <item>分享车位</item>
+        <item>车位出租</item>
+        <item>U 豆充值</item>
+        <item>历史记录</item>
+        <item>我的消息</item>
+        <item>设置</item>
+        <item>退出</item>
+    </string-array>
+
+</resources>

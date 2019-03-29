@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.theone.using">
+
+    <!-- //地图包、搜索包需要的基础权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- //定位包、导航包需要的额外权限（注：基础权限也需要） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />  模拟位置信息，用来调试 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pic_using_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ca5ddd24f1ea404c50d81801be283160" />
+
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.NextActivity" />
+        <activity android:name=".activity.payment.PaymentActivity" />
+        <activity android:name=".activity.settings.AboutActivity" />
+        <activity android:name=".activity.settings.SettingsActivity" />
+        <activity android:name=".activity.history.HistoryActivity" />
+        <activity android:name=".activity.history.HistoryDetailsActivity" />
+        <activity android:name=".activity.message.MessageActivity" />
+        <activity android:name=".activity.message.MsgDetailsActivity" />
+        <activity android:name=".activity.share.ShareActivity" />
+        <activity android:name=".activity.main.SearchActivity" />
+        <activity android:name=".activity.main.MoreParkActivity" />
+        <activity android:name=".activity.usercenter.UserCenterActivity" />
+        <activity android:name=".activity.rent.RentActivity" />
+        <activity android:name=".activity.share.ShareDetailsActivity" />
+        <activity android:name=".activity.rent.ChooseLocationActivity" />
+        <activity android:name=".common.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activity.user.LoginActivity" />
+        <activity android:name=".activity.user.RegisterActivity" />
+        <activity android:name=".activity.user.LoginByVcodeActivity" />
+        <activity android:name=".activity.main.RouteActivity" />
+        <activity android:name=".activity.main.ParkDetailsActivity"
+            android:windowSoftInputMode="adjustPan"            />
+    </application>
+
+</manifest>
